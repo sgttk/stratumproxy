@@ -24,7 +24,7 @@ install() {
 
     wget https://github.com/sgttk/stratumproxy/releases/download/v1.4.2/stratumproxy_v1.4.2 -O /usr/bin/stratumproxy
 
-    wget https://github.com/sgttk/stratumproxy/master/stratumproxy.service -O /etc/systemd/system/stratumproxy.service
+    wget https://raw.githubusercontent.com/sgttk/stratumproxy/master/stratumproxy.service -O /etc/systemd/system/stratumproxy.service
     chmod +x /usr/bin/stratumproxy
 
     echo "正在启动..."
