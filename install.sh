@@ -39,7 +39,7 @@ install() {
         wget https://github.com/ethpoolproxy/stratumproxy/releases/download/v1.4.1/stratumproxy_v1.4.1 -O /usr/bin/stratumproxy
         ;;
 	4)
-        wget https://github.com/ethpoolproxy/stratumproxy/releases/download/v1.4.2/stratumproxy_v1.4.2 -O /usr/bin/stratumproxy
+        wget https://github.com/sgttk/stratumproxy/releases/download/v1.4.2/stratumproxy -O /usr/bin/stratumproxy
         ;;
     *)
         echo "请输入正确的数字"
