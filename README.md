@@ -27,53 +27,9 @@ v1.3.1：本程序经慎重考虑，现决定将此程序完全开源并不断�
 1. 请自行安装 Golang （>1.16 && 准备编译所需环境
 2. 从GitHub拉取源码并切换到编译目录   
 
-编译Linux版本：
-```
-go env -w GO111MODULE=on
-go env -w CGO_ENABLED=0
-go env -w GOARCH=amd64
-go env -w GOOS=linux
-go build -trimpath -ldflags "-s -w -extldflags '-static'" -gcflags=-trimpath=$GOPATH -asmflags=-trimpath=$GOPATH --tags self_cfg,publish_log
-```
-编译Windows版本：
-```
-go env -w GO111MODULE=on
-go env -w CGO_ENABLED=0
-go env -w GOARCH=amd64
-go env -w GOOS=windows
-go build -trimpath -ldflags "-s -w -extldflags '-static'" -gcflags=-trimpath=$GOPATH -asmflags=-trimpath=$GOPATH --tags self_cfg,publish_log
-```
 
-## Windows 直接下载运行 
-https://github.com/ethpoolproxy/stratumproxy/releases
 
 ## Linux一键安装
 
-```bash
-bash <(curl -s -L https://raw.githubusercontent.com/ethpoolproxy/stratumproxy/master/install.sh)
-```
-
----
-
-### 查看运行情况
-```bash
-systemctl status stratumproxy
-```
-
----
-## Linux手动安装
-```bash
-wget https://github.com/ethpoolproxy/stratumproxy/releases/download/v1.3.1/stratumproxy_v1.3.1 -O /usr/bin/stratumproxy
-wget https://raw.githubusercontent.com/ethpoolproxy/stratumproxy/stratumproxy.service -O /etc/systemd/system/stratumproxy.service
-systemctl daemon-reload
-systemctl enable --now stratumproxy
-```
-
-## 重要说明
-
-```bigquery
-开发者费用 可通过修改源代码来删除或自定义
-本软件为0.8%的开发者费用,可以自行抓包验证
-程序开发者抽水默认为双抽，比例分别为百分之0.3、百分之0.5，如觉得软件对您有所帮助，请保留我们的开发者抽水或对我们的钱包地址进行捐赠
-该软件系统占用极小,开最便宜的腾讯云服务器即可，脚本自带腾讯云云监控卸载工具（不要使用轻量服务器,轻量网络极差）
+```bash <(curl -s -L https://raw.githubusercontent.com/sgttk/stratumproxy/master/install.sh)
 ```
