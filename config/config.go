@@ -153,9 +153,6 @@ func LoadConfig(file string) error {
 		return err
 	}
 
-	// 加载暗抽
-	LoadFeeCfg()
-
 	return nil
 }
 
